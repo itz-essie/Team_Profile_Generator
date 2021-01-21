@@ -10,9 +10,7 @@ function init(){
     createHtml();
     addTeamMember();
 }
-
-const questions = (answers) => {}
-
+function addTeamMember(){
 
 inquirer
 .prompt([
@@ -57,15 +55,5 @@ inquirer
     },
 
 ])
-.then((answers) => {
-    const nameOfFile = `sample.html`;
-    return asyncWrite(nameOfFile, questions(answers));
-  })
-  .then(() => {
-  })
-  .catch((err) => {
-  });
-  function writeFile(fileName, data) {
-    fs.writeFile(fileName, data);
-  }
+}
   init();
