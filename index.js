@@ -1,6 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+const questions = (answers) => {}
+
 function init()
 inquirer
 .prompt([
@@ -45,4 +47,15 @@ inquirer
     },
 
 ])
-.then ((answers))
+.then((answers) => {
+    const nameOfFile = `sample.html`;
+    return asyncWrite(nameOfFile, questions(answers));
+  })
+  .then(() => {
+  })
+  .catch((err) => {
+  });
+  function writeFile(fileName, data) {
+    fs.writeFile(fileName, data);
+  }
+  init();
