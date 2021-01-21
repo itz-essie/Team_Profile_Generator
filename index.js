@@ -18,41 +18,41 @@ inquirer
 .prompt([
     {
         type: "input",
-        message: "What is your name?", 
+        message: "What is Employee's name?", 
         name: "employeename",
     }, 
     {
         type: "input", 
-        message: "Enter you ID number.",
+        message: "Enter employee ID number.",
         name: "id", 
     }, 
     {
         type: "input", 
-        message: "What is your email address?",
+        message: "Enter team member's email address.",
         name: "email",
     },
     {
         // Only ask the manager 
         type: "input", 
-        message: "What is your office number?",
+        message: "Enter employee's office number.",
         name: "number",
     },
     {
         type: "list", 
-        message: "What is your role?",
+        message: "What is team member's role?",
         name: "role",
         choices: ['Manager', 'Engineer', 'Intern']
     },
     {
         //only ask Engineer 
         type: "input", 
-        message: "What is your GitHub?",
+        message: "Enter GitHub account name?",
         name: "github",
     },
     {
         // only ask Intern
         type: "input", 
-        message: "What school do you attend?",
+        message: "Enter school name?",
         name: "school",
     },
 
