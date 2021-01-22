@@ -4,16 +4,13 @@ const Engineer = require ("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require ("./lib/Manager");
 
-const Employees = [];
+const employees = [];
 
 function init(){
-    // createHtml(); // function to generate html profile page
-    addTeamMember();
+    employeeQuestions;
 }
-function addTeamMember(){
 
-inquirer
-.prompt([
+employeeQuestions = [
     {
         type: "input",
         message: "What is Employee's name?", 
@@ -29,12 +26,70 @@ inquirer
         message: "Enter team member's email address.",
         name: "email",
     },
-    {
-        // Only ask the manager 
-        type: "input", 
-        message: "Enter employee's office number.",
-        name: "number",
-    },
+
+]
+
+const whatNow = () =>{
+    inquirer
+    .prompt([
+        {
+            type: "list", 
+            message: "What would you like to do?", 
+            name: "userChoice",
+            choices: ["Add manager", "Add intern", "Add Engineer", "Build team profile"], 
+            
+        }
+    ])
+
+
+.then(response => {
+    switch (response.userChoice){
+        case "Add manager":
+        addManager ();
+        break;
+        case "Add intern":
+            addIntern ();
+            break;
+            case "Add engineer":
+                addEngineer();
+                break;
+                default:
+                    buildTeamProfile();
+    }
+})
+}
+
+whatNow();
+
+const addManager = ()=>{
+    inquirer
+    .prompt([
+        employeeQuestions[0], 
+        employeeQuestions[1], 
+        employeeQuestions[2], 
+        {
+            // Only ask the manager 
+            type: "input", 
+            message: "Enter employee's office number.",
+            name: "number",
+        },
+    ])
+        .then(response => {
+            whatNow();
+        })
+    
+}
+
+
+function addTeamMember(){
+
+inquirer
+.prompt([
+    employeeQuestions[0], 
+    employeeQuestions[1], 
+    employeeQuestions[2], 
+
+
     {
         type: "list", 
         message: "What is team member's role?",
