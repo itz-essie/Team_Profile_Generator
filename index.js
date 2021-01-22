@@ -7,7 +7,7 @@ const Manager = require ("./lib/Manager");
 const Employees = [];
 
 function init(){
-    createHtml();
+    // createHtml(); // function to generate html profile page
     addTeamMember();
 }
 function addTeamMember(){
