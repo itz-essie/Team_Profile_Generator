@@ -7,7 +7,7 @@ const Manager = require ("./lib/Manager");
 const employees = [];
 
 function init(){
-    employeeQuestions;
+    whatNow;
 }
 
 employeeQuestions = [
@@ -36,7 +36,7 @@ const whatNow = () =>{
             type: "list", 
             message: "What would you like to do?", 
             name: "userChoice",
-            choices: ["Add manager", "Add intern", "Add Engineer", "Build team profile"], 
+            choices: ["Add manager", "Add intern", "Add engineer", "Build team profile"], 
             
         }
     ])
@@ -51,15 +51,13 @@ const whatNow = () =>{
             addIntern ();
             break;
             case "Add engineer":
-                addEngineer();
+                addEngineer ();
                 break;
                 default:
                     buildTeamProfile();
     }
 })
 }
-
-whatNow();
 
 const addManager = ()=>{
     inquirer
@@ -80,35 +78,43 @@ const addManager = ()=>{
     
 }
 
+const addIntern = ()=>{
+    inquirer
+    .prompt([
+        employeeQuestions[0], 
+        employeeQuestions[1], 
+        employeeQuestions[2], 
+        {
+            // only ask Intern
+            type: "input", 
+            message: "Enter school name?",
+            name: "school",
+        },
+    ])
+        .then(response => {
+            whatNow();
+        })
+    
+}
 
-function addTeamMember(){
+whatNow();
 
-inquirer
-.prompt([
-    employeeQuestions[0], 
-    employeeQuestions[1], 
-    employeeQuestions[2], 
-
-
-    {
-        type: "list", 
-        message: "What is team member's role?",
-        name: "role",
-        choices: ['Manager', 'Engineer', 'Intern']
-    },
-    {
-        //only ask Engineer 
-        type: "input", 
-        message: "Enter GitHub account name?",
-        name: "github",
-    },
-    {
-        // only ask Intern
-        type: "input", 
-        message: "Enter school name?",
-        name: "school",
-    },
-
-])
+const addEngineer = ()=>{
+    inquirer
+    .prompt([
+        employeeQuestions[0], 
+        employeeQuestions[1], 
+        employeeQuestions[2], 
+        {
+            //only ask Engineer 
+            type: "input", 
+            message: "Enter GitHub account name?",
+            name: "github",
+        },
+    ])
+        .then(response => {
+            whatNow();
+        })
+    
 }
   init();
