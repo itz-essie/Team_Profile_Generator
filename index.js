@@ -3,6 +3,9 @@ const inquirer = require("inquirer");
 const Engineer = require ("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require ("./lib/Manager");
+const Employee = require ("./lib/Employee");
+
+// const employee = new Employee();
 
 const employees = [];
 const buildTeamProfile = ()=>{
@@ -96,8 +99,8 @@ const addManager = ()=>{
         },
     ])
         .then(response => {
-            const employee = new Manager(response.employeename, response.id, response.email, response.number)
-            employees.push(employee)
+            const manager = new Manager(response.employeename, response.id, response.email, response.number)
+            employees.push(manager)
             whatNow();
         })
     
