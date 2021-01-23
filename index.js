@@ -5,6 +5,29 @@ const Intern = require("./lib/Intern");
 const Manager = require ("./lib/Manager");
 
 const employees = [];
+const buildTeamProfile = ()=>{
+    employees.map(function(employee){
+        `
+        <div class="card" style="width: 18rem;">
+            <div class="card-body" style = "background-color: rgb(140, 140, 140);">
+              <h5 class="card-title"></h5>Name: ${employee.name}</h5>
+              <p class="card-text"> <i class="fa fa-coffee" aria-hidden="true"></i> Manger</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: </li>
+              <li class="list-group-item">Email: </li>
+              <li class="list-group-item">Office Number: </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          </div>`
+    })
+    
+
+}
 
 function init(){
     whatNow;
@@ -73,6 +96,8 @@ const addManager = ()=>{
         },
     ])
         .then(response => {
+            const employee = new Manager(response.employeename, response.id, response.email, response.number)
+            employees.push(employee)
             whatNow();
         })
     
@@ -92,7 +117,9 @@ const addIntern = ()=>{
         },
     ])
         .then(response => {
-            whatNow();
+           const intern = new Intern(response.employeename, response.id, response.email, response.school)
+        employees.push(intern)
+           whatNow();
         })
     
 }
@@ -113,8 +140,11 @@ const addEngineer = ()=>{
         },
     ])
         .then(response => {
+            const engineer = new Engineer(response.employeename, response.id, response.email, response.github)
+            employees.push(engineer);
             whatNow();
         })
+ 
     
 }
   init();
