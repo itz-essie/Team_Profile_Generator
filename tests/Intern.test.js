@@ -20,4 +20,13 @@ describe("Sub classes for Intern", () => {
       expect(cb).toThrowError(err);
     });
   });
-});
+  describe("getRole method should return 'Intern'", () =>{
+    it ("getRole should return 'Intern'", () => {
+    
+      const roleValue = "Intern";
+      const b = new Intern("Foo", 4, "Columbia@gmail.com", roleValue);
+      
+      expect(b.getRole()).toEqual("Intern");
+  })
+  })
+})
