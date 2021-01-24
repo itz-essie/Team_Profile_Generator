@@ -11,4 +11,13 @@ describe('Engineer Sub Class', () => {
         expect(obj.getGithub()).toEqual("itz-essie");
       })
     })
-})
+    describe("getRole method should return 'Engineer'", () =>{
+      it ("getRole should return 'Engineer'", () => {
+      
+        const roleValue = "Engineer";
+        const e = new Engineer("Foo", 4, "Columbia@gmail.com", roleValue);
+        
+        expect(e.getRole()).toEqual("Engineer");
+    })
+    })
+  })
