@@ -4,12 +4,15 @@ const Engineer = require ("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require ("./lib/Manager");
 const Employee = require ("./lib/Employee");
-
+const buildIntern=""
 // const employee = new Employee();
 
 const employees = [];
 const buildTeamProfile = ()=>{
     employees.map(function(employee){
+        if (member.type === "Intern"){
+            buildIntern =
+
         `
         <div class="card" style="width: 18rem;">
             <div class="card-body" style = "background-color: rgb(140, 140, 140);">
@@ -17,9 +20,9 @@ const buildTeamProfile = ()=>{
               <p class="card-text"> <i class="fa fa-coffee" aria-hidden="true"></i> Manger</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: </li>
-              <li class="list-group-item">Email: </li>
-              <li class="list-group-item">Office Number: </li>
+              <li class="list-group-item">ID: ${employee.id} </li>
+              <li class="list-group-item">Email: ${employee.email} </li>
+              <li class="list-group-item">School: ${employee.school}</li>
             </ul>
             <div class="card-body">
               <a href="#" class="card-link">Card link</a>
@@ -27,9 +30,9 @@ const buildTeamProfile = ()=>{
             </div>
           </div>
           </div>`
-    })
-    
-
+        }
+    }
+    )
 }
 
 function init(){
