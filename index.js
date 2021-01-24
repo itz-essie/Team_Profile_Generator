@@ -1,10 +1,13 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+// var validator = require("email-validator");
 const Engineer = require ("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require ("./lib/Manager");
 const Employee = require ("./lib/Employee");
 const buildIntern=""
+
+// validator.validate("test@email.com");
 // const employee = new Employee();
 
 const employees = [];
@@ -49,11 +52,17 @@ employeeQuestions = [
         type: "input", 
         message: "Enter employee ID number.",
         name: "id", 
+        
     }, 
     {
         type: "input", 
         message: "Enter team member's email address.",
         name: "email",
+        validate: function(email)
+         // Regex mail check (return true if valid mail)
+         { 
+         return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(email);
+         }
     },
 
 ]
