@@ -7,6 +7,7 @@ describe('Classes for Employee', () => {
       expect(testEmployee.name).toEqual("Esiena");
       expect(testEmployee.id).toEqual(6);
       expect(testEmployee.email).toEqual("eekwofia@gmail.com");
+      expect(testEmployee.getRole()).toEqual("Employee");
     });
 
     // it("should throw an error if not provided a 'text' value", () => {
