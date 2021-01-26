@@ -37,6 +37,8 @@ let person = ""
   employees.map(function (employee) {
     if (employee.getRole() === "Intern") {
       person += `
+      <div class="row">
+          <div class= "col-md-3">
         <div class="card" style="width: 18rem;">
             <div class="card-body" style = "background-color: rgb(140, 140, 140);">
               <h5 class="card-title"></h5>Name: ${employee.name}</h5>
@@ -50,7 +52,9 @@ let person = ""
           </div>
           </div>`;
     } else if (employee.getRole() === "Manager") {
-      person += `<div class="card" style="width: 18rem;">
+      person += `<div class="row">
+      <div class= "col-md-3">
+      <div class="card" style="width: 18rem;">
                 <div class="card-body" style = "background-color: rgb(140, 140, 140);">
                   <h5 class="card-title"></h5> Name: ${employee.name}</h5>
                   <p class="card-text"> <i class="fa fa-coffee" aria-hidden="true"></i> Manger</p>
@@ -60,9 +64,13 @@ let person = ""
                   <li class="list-group-item">Email:${employee.email} </li>
                   <li class="list-group-item">Office Number: ${employee.number} </li>
                 </ul>
+                </div>
+                </div>
                 </div>`;
     } else if (employee.getRole() === "Engineer") {
-      person += `<div class="card" style="width: 18rem;">
+      person += `<div class="row">
+      <div class= "col-md-3">
+      <div class="card" style="width: 18rem;">
             <div class="card-body" style = "background-color: rgb(140, 140, 140);">
               <h5 class="card-title">${employee.name}</h5>
               <p class="card-text"> <i class="fas fa-glasses"></i> Engineer</p>
@@ -72,6 +80,8 @@ let person = ""
               <li class="list-group-item">Email:${employee.email} </li>
               <li class="list-group-item">GitHub:${employee.github} </li>
             </ul>
+          </div>
+          </div>
           </div>`;
     }
 

@@ -6,22 +6,23 @@ describe("Sub classes for Intern", () => {
       const testSchool = "Columbia";
       const a = new Intern("Foo", 4, "Columbia@gmail.com", testSchool);
       expect(a.school).toEqual("Columbia");
-    }); 
+    });
   });
-  describe("getRole method should return 'Intern'", () =>{
-    it ("getRole should return 'Intern'", () => {
-    
+  describe("getRole method should return 'Intern'", () => {
+    it("getRole should return 'Intern'", () => {
       const roleValue = "Intern";
       const b = new Intern("Foo", 4, "Columbia@gmail.com", roleValue);
-      
+
       expect(b.getRole()).toEqual("Intern");
-  })
-  })
-})
-  // it("should throw an error if not provided a text string value", () => {
-      // Arrange
-      // const cb = () => new Intern("Foo", 4, "");
-      // const err = new Error("Input of 'school' should be a string.");
-      // expect(cb).tothrow(err);
-      
-      //  });  
+    });
+  });
+});
+it("should throw an error if not provided a text string value", () => {
+  // Arrange
+
+  const cb = new Intern("Foo", 4, "Columbia@gmail.com", "");
+    expect(() => {
+      if (cb.school === "")
+      throw new Error("Input of 'school' should be a string.");
+    }).toThrow("Input of 'school' should be a string.");
+});
