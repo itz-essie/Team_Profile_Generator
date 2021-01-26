@@ -17,3 +17,13 @@ describe('Classes for Employee', () => {
     //    });   
   })
 })
+
+// it("should throw an error if not provided with valid inputs", () => {
+//   // Arrange
+
+//   const cb = new Employee("Foo", 4, "Columbia@gmail.com");
+//   expect(() => {
+//     if (cb.name === "" && cb.id === "" && cb.email === "")
+//       throw new Error("please enter valid inputs, cannot leave blank.");
+//   }).toThrow("please enter valid inputs, cannot leave blank.");
+// });
