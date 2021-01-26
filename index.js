@@ -49,7 +49,7 @@ let person = ""
             </ul>
           </div>
           </div>`;
-    } else if (employee.getRole() === "Manger") {
+    } else if (employee.getRole() === "Manager") {
       person += `<div class="card" style="width: 18rem;">
                 <div class="card-body" style = "background-color: rgb(140, 140, 140);">
                   <h5 class="card-title"></h5> Name: ${employee.name}</h5>
@@ -213,6 +213,5 @@ const addEngineer = () => {
       employees.push(engineer);
       whatNow();
     })
-    // 
   }
 init();
