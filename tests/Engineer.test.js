@@ -18,6 +18,17 @@ describe('Engineer Sub Class', () => {
         const e = new Engineer("Foo", 4, "Columbia@gmail.com", roleValue);
         
         expect(e.getRole()).toEqual("Engineer");
-    })
-    })
-  })
+    });
+    });
+    
+  });
+
+  it("should throw an error if not provided a text string value", () => {
+    // Arrange
+  
+    const cb = new Engineer("Foo", 4, "Columbia@gmail.com", "");
+    expect(() => {
+      if (cb.github === "")
+        throw new Error("input of 'github' should be a string.");
+    }).toThrow("input of 'github' should be a string.");
+  });

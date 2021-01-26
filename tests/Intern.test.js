@@ -21,8 +21,8 @@ it("should throw an error if not provided a text string value", () => {
   // Arrange
 
   const cb = new Intern("Foo", 4, "Columbia@gmail.com", "");
-    expect(() => {
-      if (cb.school === "")
+  expect(() => {
+    if (cb.school === "")
       throw new Error("Input of 'school' should be a string.");
-    }).toThrow("Input of 'school' should be a string.");
+  }).toThrow("Input of 'school' should be a string.");
 });
