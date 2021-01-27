@@ -45,7 +45,7 @@ node index.js
 ## Demo
 
 ## Screenshot of application
-![Daily Work Day Scheduler](./assets/images/screenshot.png)
+![Daily Work Day Scheduler](./Assets/images/screenshot.png)
 
 
 ## Questions
