@@ -61,8 +61,8 @@ let person = ""
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">ID: ${employee.id}</li>
-                  <li class="list-group-item">Email:${employee.email} </li>
-                  <li class="list-group-item">Office Number: ${employee.number} </li>
+                  <li class="list-group-item">Email: ${employee.email} </li>
+                  <li class="list-group-item">Office Number: ${employee.officeNumber} </li>
                 </ul>
                 </div>
                 </div>
@@ -72,13 +72,13 @@ let person = ""
       <div class= "col-md-3">
       <div class="card" style="width: 18rem;">
             <div class="card-body" style = "background-color: rgb(140, 140, 140);">
-              <h5 class="card-title">${employee.name}</h5>
+              <h5 class="card-title"> Name: ${employee.name}</h5>
               <p class="card-text"> <i class="fas fa-glasses"></i> Engineer</p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${employee.id}</li>
-              <li class="list-group-item">Email:${employee.email} </li>
-              <li class="list-group-item">GitHub:${employee.github} </li>
+              <li class="list-group-item">Email: ${employee.email} </li>
+              <li class="list-group-item">GitHub: ${employee.github} </li>
             </ul>
           </div>
           </div>
@@ -158,7 +158,7 @@ const addManager = () => {
         // Only ask the manager
         type: "input",
         message: "Enter employee's office number.",
-        name: "number",
+        name: "officeNumber",
       },
     ])
     .then((response) => {
@@ -166,7 +166,7 @@ const addManager = () => {
         response.employeename,
         response.id,
         response.email,
-        response.number
+        response.officeNumber
       );
       employees.push(manager);
       whatNow();
