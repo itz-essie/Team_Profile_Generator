@@ -41,13 +41,13 @@ let person = ""
       person += `<div class="row">
       <div class= "col-md-3">
       <div class="card" style="width: 18rem;">
-                <div class="card-body" style = "background-color: rgb(140, 140, 140);">
+                <div class="card-body" style = "background-color: rgb(6, 29, 79); color: white;">
                   <h5 class="card-title"></h5> Name: ${employee.name}</h5>
                   <p class="card-text"> <i class="fa fa-coffee" aria-hidden="true"></i> Manger</p>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">ID: ${employee.id}</li>
-                  <li class="list-group-item">Email: ${employee.email} </li>
+                  <li class="list-group-item">Email: <a href="mailto:${employee.email}"${employee.email}</a></li>
                   <li class="list-group-item">Office Number: ${employee.officeNumber} </li>
                 </ul>
                 </div>
@@ -56,14 +56,14 @@ let person = ""
       person += `
       <div class= "col-md-3">
       <div class="card" style="width: 18rem;">
-            <div class="card-body" style = "background-color: rgb(140, 140, 140);">
+            <div class="card-body" style = "background-color: rgb(14, 67, 113); color: white;">
               <h5 class="card-title"></h5> Name: ${employee.name}</h5>
               <p class="card-text"> <i class="fas fa-glasses"></i> Engineer</p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${employee.id}</li>
-              <li class="list-group-item">Email: ${employee.email} </li>
-              <li class="list-group-item">GitHub: ${employee.github} </li>
+              <li class="list-group-item">Email: <a href="mailto:${employee.email}"${employee.email}</a></li>
+              <li class="list-group-item">GitHub:<a href="https://github.com/${employee.gitHub}"target="_blank">${employee.gitHub}</a></li>
             </ul>
           </div>
           </div>`;
@@ -77,7 +77,7 @@ let person = ""
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${employee.id} </li>
-                    <li class="list-group-item">Email: ${employee.email} </li>
+                    <li class="list-group-item">Email: <a href="mailto:${employee.email}"${employee.email}</a></li>
                     <li class="list-group-item">School: ${employee.school}</li>
                   </ul>
                 </div>
