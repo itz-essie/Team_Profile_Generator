@@ -31,27 +31,13 @@ const buildTeamProfile = () => {
           <h1 class="display-4">My Team</h1>
         </div>
       </div>`
-const foot = `</body>
+const foot = `
+</div>
+</body>
 </html>`
 let person = ""
   employees.map(function (employee) {
-    if (employee.getRole() === "Intern") {
-      person += `
-      <div class="row">
-          <div class= "col-md-3">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body" style = "background-color: rgb(140, 140, 140);">
-              <h5 class="card-title"></h5>Name: ${employee.name}</h5>
-              <p class="card-text"><i class="fas fa-glasses"></i> Intern </p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: ${employee.id} </li>
-              <li class="list-group-item">Email: ${employee.email} </li>
-              <li class="list-group-item">School: ${employee.school}</li>
-            </ul>
-          </div>
-          </div>`;
-    } else if (employee.getRole() === "Manager") {
+    if (employee.getRole() === "Manager") {
       person += `<div class="row">
       <div class= "col-md-3">
       <div class="card" style="width: 18rem;">
@@ -65,14 +51,13 @@ let person = ""
                   <li class="list-group-item">Office Number: ${employee.officeNumber} </li>
                 </ul>
                 </div>
-                </div>
                 </div>`;
     } else if (employee.getRole() === "Engineer") {
-      person += `<div class="row">
+      person += `
       <div class= "col-md-3">
       <div class="card" style="width: 18rem;">
             <div class="card-body" style = "background-color: rgb(140, 140, 140);">
-              <h5 class="card-title"> Name: ${employee.name}</h5>
+              <h5 class="card-title"></h5> Name: ${employee.name}</h5>
               <p class="card-text"> <i class="fas fa-glasses"></i> Engineer</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -81,8 +66,22 @@ let person = ""
               <li class="list-group-item">GitHub: ${employee.github} </li>
             </ul>
           </div>
-          </div>
           </div>`;
+     } else if (employee.getRole() === "Intern") {
+            person += `
+                <div class= "col-md-3">
+              <div class="card" style="width: 18rem;">
+                  <div class="card-body" style = "background-color: rgb(140, 140, 140);">
+                    <h5 class="card-title"></h5>Name: ${employee.name}</h5>
+                    <p class="card-text"><i class="fas fa-glasses"></i> Intern </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${employee.id} </li>
+                    <li class="list-group-item">Email: ${employee.email} </li>
+                    <li class="list-group-item">School: ${employee.school}</li>
+                  </ul>
+                </div>
+                </div>`;
     }
 
   });
