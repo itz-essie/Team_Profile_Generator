@@ -43,7 +43,7 @@ node index.js
 ```
 
 ## Demo
-![Team Profile Generator](./Assets/Demo.gif)
+![Team Profile Generator](./Assets/images/Demo.gif)
 
 ## Screenshot of application
 ![Team Profile Generator](./Assets/images/Screenshot.png)
