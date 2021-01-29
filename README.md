@@ -43,6 +43,7 @@ node index.js
 ```
 
 ## Demo
+![Daily Work Day Scheduler](./Assets/Demo.gif)
 
 ## Screenshot of application
 ![Daily Work Day Scheduler](./Assets/images/Screenshot.png)
