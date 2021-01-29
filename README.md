@@ -43,10 +43,10 @@ node index.js
 ```
 
 ## Demo
-![Daily Work Day Scheduler](./Assets/Demo.gif)
+![Team Profile Generator](./Assets/Demo.gif)
 
 ## Screenshot of application
-![Daily Work Day Scheduler](./Assets/images/Screenshot.png)
+![Team Profile Generator](./Assets/images/Screenshot.png)
 
 
 ## Questions
